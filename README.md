@@ -1,4 +1,7 @@
 # BLOOM
+
+## **About**
+
 A web application which provides effective methods to reduce anxiety, cognitive fatigue, depression and stress by making the users engage in several mind relaxing activities.It is cross browser compatible and supported in mobile platforms as well.
 
 Mental stress is a social phenomenon which all social groups and all age categories may experience. Hence the beneficiaries and the intended audience of this system will be people of any age category.
@@ -9,6 +12,15 @@ The process is based upon the techniques of machine learning, deep learning and 
 - Mind relaxing games
 
 System initially recommends a feature for the user depending on the mood and user is free either to continue on the path initiated by the system or choose any feature of preference.
+
+## **Features**
+
+<p align="center">
+  <img  width=700  height=400 src="https://user-images.githubusercontent.com/65526190/109391205-e65fc700-793b-11eb-926b-76ebe76db4df.png">
+</p>
+
+**Face Scan**
+- If the user is unsure about which method to use or uncertain about their emotions, then they can let the application to recommend them a method by face scanning.           Machine learning techniques are utilized in emotion recognition.
 
 **A Chatbot to have Text-based Conversations.**
 - Users can freely talk about their emotions without having the fear of getting labeled as
