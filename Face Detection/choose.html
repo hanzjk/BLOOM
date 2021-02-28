@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RECOMMENDED FEATURE</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+   <link href="../color/default.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  
+</head>
+<body>
+    
+	<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+					<h1 class="brand"><a href="index.html">RECOMMENDED FEATURE</a></h1>
+					<!-- navigation -->
+					<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+							<li><a title="team" href="../index.html">Home</a></li>
+							<li><a title="blog" href="#help">Help</a></li>
+							<li><a title="contact" href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  
+
+    <body>
+       <div class="choose">
+           <div class="rec">
+            <img class="recimg" src="reccc.gif" width="8%">
+            
+            <p class="rectext" style ="color:rgba(19, 53, 39, 0.973)">RECOMMENDED<br>JUST FOR YOU !!!</p>
+          </div>
+
+        <div class="slider">
+            <div id="slider">
+                <input type="radio" name="testimonial" id="t-2">
+                <input type="radio" name="testimonial" id="t-3" checked>
+                <input type="radio" name="testimonial" id="t-4">
+                <div class="testimonials">
+                    <label id ="t-2" class="item w3-animate-left" for="t-2" >
+                        <img id ="I1" alt="Picture" >
+                        <p id ="C1"></p>
+                      
+                    </label>
+                    
+                    <label class="item2 w3-animate-zoom" for="t-3">
+                        <img id ="I2" alt="Picture" >
+                        <div class="tick">
+                            <img class="tick" src="rec2.gif" width="5%">
+                            <p  id =C2 style="margin-top:-40%; font-size: 200%;"  ></p>
+  
+                            </div>
+                     
+                    </label>
+                    <label class="item w3-animate-right" for="t-4">
+                        <img id ="I3" alt="Picture">
+                        <p id=C3></p>
+                     
+                    </label>
+                   
+                </div>
+                <div class="dots">
+                    <label for="t-2"></label>
+                    <label for="t-3"></label>
+                    <label for="t-4"></label>
+                </div>
+            </div>
+            </div>
+            
+        <script> 
+        
+    
+     var option=localStorage.getItem('reccomend');
+    if(option=="bot"){
+        document.getElementById("C1").innerHTML="GAMES";
+        document.getElementById("I1").src = "gamepad.png";
+       
+
+        document.getElementById("C2").innerHTML="CHATBOT";
+        document.getElementById("I2").src = "robotic.png";
+        
+
+        document.getElementById("C3").innerHTML="MUSIC PLAYER";
+        document.getElementById("I3").src = "disc.png";
+
+        document.getElementById("C2").onclick = function(){
+            location.href="../chatbot.html";
+        }
+        document.getElementById("C1").onclick = function(){
+            location.href="../games.html";
+        }
+        document.getElementById("C3").onclick = function(){
+            location.href="../Music/emotiondetect.html";
+        }
+    }
+
+    else if(option=="music"){
+        document.getElementById("C1").innerHTML="GAMES";
+        document.getElementById("I1").src = "gamepad.png";
+
+        document.getElementById("C3").innerHTML="CHATBOT ";
+        document.getElementById("I3").src = "robotic.png";
+
+        document.getElementById("C2").innerHTML="MUSIC PLAYER";
+        document.getElementById("I2").src = "disc.png";
+
+        document.getElementById("C2").onclick = function(){
+            location.href="../Music/emotiondetect.html";
+        }
+        document.getElementById("C1").onclick = function(){
+            location.href="../games.html";
+        }
+        document.getElementById("C3").onclick = function(){
+            location.href="../chatbot.html";
+        }
+ 
+    }
+    else if(option=="game"){
+        document.getElementById("C2").innerHTML="GAMES <br>";
+        document.getElementById("I2").src = "gamepad.png";
+
+        document.getElementById("C3").innerHTML="CHATBOT ";
+        document.getElementById("I3").src = "robotic.png";
+
+        document.getElementById("C1").innerHTML="MUSIC PLAYER";
+        document.getElementById("I1").src = "disc.png";
+
+        document.getElementById("C2").onclick = function(){
+            location.href="../games.html";
+        }
+        document.getElementById("C3").onclick = function(){
+            location.href="../chatbot.html";
+        }
+        document.getElementById("C1").onclick = function(){
+            location.href="../Music/emotiondetect.html";
+        }
+    }
+           </script>
+           </div>
+        </body>
+
+        <section id="help" class="section">
+            <div class="container">
+                <h4>Help</h4>
+                <!-- Three columns -->
+                <div class="row">
+                    <div class="span3">
+                        <div class="home-post">
+                            <div class="post-image">
+                                <img class="max-img" src="../img/help/face.gif" alt="" />
+                            </div>
+                            <div class="post-meta">
+                                <i class="icon-file  icon-2x"></i>
+                                <span class="tags"><a href="../bloomHelp.html"> Click here to get help</a></span>
+                            </div>
+                            <div class="entry-content">
+                                <h5><strong><a href="../bloomHelp.html">Face Scan</a></strong></h5>
+                                <p>
+                                    Having issues when using face scan? No worries click here to get help&hellip;
+                                </p>
+                                <a href="../bloomHelp.html" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="home-post">
+                            <div class="post-image">
+                                <img class="max-img" src="../img/help/bot.gif" alt="" />
+                            </div>
+                            <div class="post-meta">
+                                <i class="icon-file icon-2x"></i>
+                                <span class="tags"><a href="../chatbotHelp.html"> Click here to get help</a></span>
+                            </div>
+                            <div class="entry-content">
+                                <h5><strong><a href="../chatbotHelp.html">ChatBot</a></strong></h5>
+                                <p>
+                                    Facing difficulties when chatting with me? You can get help from here&hellip;
+                                </p>
+                                <a href="../chatbotHelp.html" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="home-post">
+                            <div class="post-image">
+                                <img class="max-img" src="../img/help/mu.gif" alt="" />
+                            </div>
+                            <div class="post-meta">
+                                <i class="icon-file icon-2x"></i>
+                                <span class="tags"><a href="../MusicHelp.html"> Click here to get help</a></span>
+                            </div>
+                            <div class="entry-content">
+                                <h5><strong><a href="../MusicHelp.html">Music Player</a></strong></h5>
+                                <p>
+                                    More problems while using me? Cheers click here to get some help&hellip;
+                                </p>
+                                <a href="../MusicHelp.html" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3">
+                        <div class="home-post">
+                            <div class="post-image">
+                                <img class="max-img" src="../img/help/game.gif" alt="" />
+                            </div>
+                            <div class="post-meta">
+                                <i class="icon-file icon-2x"></i>
+                                <span class="tags"><a href="../gameHelp.html"> Click here to get help</a></span>
+                            </div>
+                            <div class="entry-content">
+                                <h5><strong><a href="../gameHelp.html">Games</a></strong></h5>
+                                <p>
+                                    Don't know how to play games? No issues visit here to get to know about it&hellip;
+                                </p>
+                                <a href="../gameHelp.html" class="more">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="span6 offset3">
+                        <ul class="social-networks">
+                            <li><a href = "mailto: chatbotse2020@gmail.com"><i class="icon-circled icon-bgdark icon-envelope icon-3x"></i></a></li>
+                            
+                        </ul>
+                        <p class="copyright">
+                            &copy;  All rights reserved.
+                            <div class="credits">
+                                Designed by Team BLOOM</a>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer></section>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery.scrollTo.js"></script>
+        <script src="../js/jquery.nav.js"></script>
+        <script src="../js/jquery.localScroll.js"></script>
+        <script src="../js/bootstrap.js"></script>
+        <script src="../js/jquery.prettyPhoto.js"></script>
+        <script src="../js/isotope.js"></script>
+        <script src="../js/jquery.flexslider.js"></script>
+        <script src="../js/inview.js"></script>
+        <script src="../js/animate.js"></script>
+        <script src="../js/custom.js"></script>
+</body>
+</html>

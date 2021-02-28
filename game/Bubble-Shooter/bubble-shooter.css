@@ -1,0 +1,338 @@
+.b {
+    text-align: center;
+}
+
+#viewport {
+    border: solid 0px;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background: url("back.jpg");
+}
+
+.icon-bar {
+    width: 80px;
+    top: 500px;
+    background-color: #555;
+}
+
+.icon-bar a {
+    top: 540px;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: rgb(140, 18, 156);
+    z-index: 5;
+}
+
+.active {
+    background-color: #5c34eb;
+}
+
+#sound {
+    width: auto;
+    height: 10%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+.Sound {
+    height: 75vh;
+    width: 25vw;
+    z-index: 4;
+    top: 75%;
+    left: 5%;
+    position: absolute;
+    display: flex;
+}
+
+.heading {
+    background-color: rgba(91, 154, 236, 0.747);
+    height: 14vh;
+    width: 100%;
+    font-family: 'Carter One', cursive;
+    text-align: center;
+    color: rgba(102, 8, 165, 0.863);
+    top: 200px;
+    bottom: 400px;
+    z-index: 3;
+    font-size: 5vw;
+}
+
+.main-content {
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    bottom: 0px;
+    z-index: 0;
+    display: flex;
+}
+
+#sub-content {
+    height: 90vh;
+    width: 80vw;
+    position: absolute;
+    top: 10%;
+    left: 27%;
+    z-index: 1;
+    display: flex;
+}
+
+#viewport {
+    align-self: center;
+}
+
+.image {
+    display: block;
+    width: 40%;
+    height: auto;
+    margin: auto;
+    padding: 3%;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hd {
+    text-align: right;
+    font-size: 200%;
+    padding: 3%;
+}
+
+p {
+    text-align: center;
+    font-size: 100%;
+    font-family: Grandstander, cursive;
+    color: rgb(7, 5, 1);
+    font-style: bold;
+}
+
+.t {
+    text-align: center;
+    margin: auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+.tr {
+    text-align: center;
+}
+
+.td {
+    text-align: center;
+}
+
+.he {
+    font-size: 300%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    text-align: left;
+    padding: 5%;
+    font-size: 100%;
+    font-style: bold;
+    font-family: sans-serif;
+    color: black;
+}
+
+.dv {
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 9%;
+}
+
+.ne {
+    display: inline-block;
+    width: 40%;
+    height: auto;
+}
+
+ul.c {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+li {
+    text-align: center;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#help {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    top: 35%;
+    left: -55%;
+    z-index: 7;
+    display: flex;
+}
+
+.Help {
+    height: 20%;
+    width: 65%;
+    position: absolute;
+    top: 70%;
+    left: 75%;
+    padding-left: -35%;
+}
+
+
+/* Tooltip text */
+
+.Help .tooltiptext {
+    visibility: hidden;
+    width: 35%;
+    height: auto;
+    background-color: rgba(97, 17, 17, 0.479);
+    color: rgb(9, 1, 31);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 5px;
+    /* Position the tooltip text */
+    position: absolute;
+    top: 25%;
+    left: -45%;
+    margin-left: 2%;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+/* Tooltip arrow */
+
+.Help.tooltiptext::after {
+    content: "";
+    position: absolute;
+    margin-left: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.Help:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .main-content {
+        width: 100%;
+        height: 100%;
+        top: 15%;
+    }
+    #viewport {
+        height: 80%;
+        width: 90%;
+    }
+    .heading {
+        max-width: 100vw;
+        height: 7%;
+        font-size: 8vw;
+    }
+    .icon-bar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+    .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 12px 0;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 36px;
+    }
+    #sub-content {
+        position: absolute;
+        top: 0%;
+        left: 5%;
+        height: 85%;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+    }
+    .Sound {
+        margin-bottom: 20px;
+        position: absolute;
+        width: 55%;
+        left: 5%;
+        height: 45%;
+        top: 69%;
+        z-index: 4;
+        display: flex;
+    }
+    #help {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        top: -5%;
+        left: 5%;
+        z-index: 7;
+        display: flex;
+    }
+    .Help {
+        height: 20%;
+        width: 65%;
+        position: absolute;
+        top: 70%;
+        left: 55%;
+        padding-left: -35%;
+    }
+    .Help .tooltiptext {
+        visibility: hidden;
+        width: 50%;
+        height: auto;
+        background-color: rgba(97, 17, 17, 0.479);
+        color: rgb(9, 1, 31);
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 5px;
+        /* Position the tooltip text */
+        position: absolute;
+        top: -95%;
+        left: 2%;
+        margin-left: 2%;
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+}

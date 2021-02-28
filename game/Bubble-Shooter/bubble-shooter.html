@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <title>Bubble Shooter Game</title>
+<link rel="stylesheet" href="bubble-shooter.css">
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,900&family=Grenze+Gotisch:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='bubble-shooter.js'></script>
+</head>
+
+<body>
+
+
+    <div class="heading">BUBBLE SHOOTER</div>
+
+    <div class="icon-bar">
+        <a href="../../index.html"><i class="fa fa-home"></i></a>
+            <a href="../../games.html"><i class="fa fa-gamepad"></i></a>
+            <a href="../../Music/emotiondetect.html"><i class="fa fa-music"></i></a>
+            <a href="../../chatbot.html"><i class="fa fa-comments"></i></a>
+    </div>
+
+    <div class="main-content">
+
+        <div id="sub-content">
+            <canvas id="viewport" width="628" height="628"></canvas>
+            <div class="Sound"><img src="SOUND_ON.png" alt="" id="sound"></div>
+            <div class="Help"> <img src="Help-icon.png" alt="" id="help">
+                <span class="tooltiptext"><p>Shoot the bubbles of same color to break them down!</p></span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function resize() {
+            $("#viewport").outerHeight($(window).height() - $("#viewport").offset().top - Math.abs($("#viewport").outerHeight(true) - $("#viewport").outerHeight()));
+        }
+        $(document).ready(function() {
+            resize();
+            $(window).on("resize", function() {
+                resize();
+            });
+        });
+    </script>
+</body>
+
+</html>

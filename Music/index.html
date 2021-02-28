@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta name="viewport" content="width-device-width, initial-scale=1">  <title>MUSIC PLAYER</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="waves.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="style.css">
+<link href="bootstrap-responsive.css" rel="stylesheet">
+<link href="style3.css" rel="stylesheet">
+<link href="default.css" rel="stylesheet">
+<link rel="shortcut icon" href="../img/favicon.ico">
+
+<style>
+	.modal{
+		display: none;
+	
+	}
+
+	df-messenger{
+    --df-messenger-button-titlebar-color: #174763;
+    --df-messenger-send-icon: #6191e9;
+    --df-messenger-user-message: #56c9bfa1;
+    --df-messenger-bot-message: #75c2cfa1;
+
+    --df-messenger-chat-background-color:#a1d4e479;
+    --df-messanger-wait-open:"true";
+}
+
+</style>
+</head>
+<body>
+
+<script>
+	 setInterval(openBot,20000);
+
+function openBot(){
+   var modal = document.getElementById("myModal");
+   modal.style.display = "block";
+
+}
+</script>	
+	<div class="header">
+          
+	<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+					<h1 class="brand"><a href="index.html">MUSIC PLAYER</a></h1>
+					<!-- navigation -->
+					<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+							<li><a title="team" href="../index.html">Home</a></li>
+							<li><a title="services" href="../musichelp.html">Music Help</a></li>
+							<li><a title="services" href="../chatbot.html">ChatBot</a></li>
+							<li><a title="contact" href="../games.html">Games</a></li>
+							<li><a title="contact" href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!--Content before waves-->
+		<div class="inner-header flex">
+		
+		</div>
+		
+
+		
+		<!--Waves Container-->
+		<div>
+		<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+		viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+		<defs>
+		<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+		</defs>
+		<g class="parallax">
+		<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+		<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+		<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+		<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+		</g>
+		</svg>
+		</div>
+		<!--Waves end-->
+		
+		<div class="content flex">
+			<div class="mhn-player">
+				<div class="album-art"></div>
+				
+				<div class="play-list" id ="playlist">
+					<a href="#" class="play" id="song1"
+						data-id="1"
+						data-album="e"
+						data-artist="w"
+						data-title="w"
+						data-albumart="img1.jpg"
+						data-url=""></a>
+				
+					<a href="#" class="play" id="song2"
+						data-id="2"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img2.jpg"
+						data-url=""></a>
+				
+					<a href="#" class="play" id="song3"
+					data-id="3"
+					data-album=""
+					data-artist=""
+					data-title=""
+					data-albumart="img3.jpg"
+					data-url=""></a>
+				
+					<a href="#" class="play" id="song4"
+						data-id="4"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img4.jpg"
+						data-url=""></a>
+				
+					<a href="#" class="play" id="song5"
+						data-id="5"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img5.jpg"
+						data-url=""></a>
+				
+					<a href="#" class="play" id="song6"
+						data-id="6"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img6.jpg"
+						data-url=""></a>
+				
+					<a href="#" class="play" id="song7"
+						data-id="7"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img8.jpg"
+						data-url=""></a>
+				
+					<a href="#" class="play" id="song8"
+						 data-id="8"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img7.jpg"
+						data-url=""></a>
+
+						<a href="#" class="play" id="song9"
+						 data-id="9"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img9.jpg"
+						data-url=""></a>
+
+						<a href="#" class="play" id="song10"
+						 data-id="10"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img10.jpg"
+						data-url=""></a>
+
+						<a href="#" class="play" id="song11"
+						 data-id="11"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img11.jpg"
+						data-url=""></a>
+
+						<a href="#" class="play" id="song12"
+						 data-id="12"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img12.jpg"
+						data-url=""></a>
+
+						<a href="#" class="play" id="song13"
+						 data-id="13"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img15.jpg"
+						data-url=""></a>
+
+						<a href="#" class="play" id="song14"
+						 data-id="14"
+						data-album=""
+						data-artist=""
+						data-title=""
+						data-albumart="img14.jpg"
+						data-url=""></a>
+				</div>
+				
+				<div class="audio"></div>
+				<div class="current-info">
+					<div class="song-artist"></div>
+					<div class="song-album"></div>
+					<div class="song-title"></div>
+				</div>
+				<div class="controls">
+				<a href="#" class="toggle-play-list"><i class="fa fa-list-ul"></i></a>
+				<div class="duration clearfix">
+					<span class="pull-left play-position"></span>
+					<span class="pull-right"><span class="play-current-time">00:00</span> / <span class="play-total-time">00:00</span></span>
+				</div>
+				<div class="progress"><div class="bar"></div></div>
+				<div class="action-button">
+					<a href="#" class="prev"><i class="fa fa-step-backward"></i></a>
+					<a href="#" class="play-pause"><i class="fa fa-pp"></i></a>
+					<a href="#" class="stop"><i class="fa fa-stop"></i></a>
+					<a href="#" class="next"><i class="fa fa-step-forward"></i></a>
+					<input type="range" class="volume" min="0" max="1" step="0.1" value="0.5" data-css="0.5">
+				</div>
+				</div>
+				</div>
+				</div>
+		</div>
+		<!--Header ends-->
+		
+		<!--Content starts-->
+		<section id="contact">
+		<footer>
+			<div class="container">
+				<div class="raw">
+					<div class="span6 offset3">
+						<ul class="social-networks">
+							<li><a href = "mailto: chatbotse2020@gmail.com"><i class="icon-circled icon-bgdark icon-envelope icon-3x"></i></a></li>
+							
+						</ul>
+						<p class="copyright">
+							&copy;  All rights reserved.
+							<div class="credits">
+								
+								Designed by Team BLOOM</a>
+							</div>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- ./container -->
+		</footer></section>
+
+		</div>
+
+		<div id="myModal" class="modal">
+
+			<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Bloom"
+  agent-id="3999c94e-5f96-4600-8036-d5dbdfb33df2"
+  language-code="en"
+  chat-icon = "bot.gif"
+  
+></df-messenger>
+	    </div>
+
+<!-- partial:index.partial.html -->
+
+
+<!-- partial -->
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+<script src='https://enscrollplugin.com/releases/enscroll-0.6.1.min.js'></script><script  src="./script.js"></script>
+<script>
+	
+	   
+	     var user=localStorage.getItem('user');
+		 var plist=localStorage.getItem('emo');
+		 if(user!=null)
+			plist=user;
+		 console.log(plist);
+		 if(plist=="happy"){
+			document.getElementById( 'song1').setAttribute('data-artist','');
+			document.getElementById( 'song1').setAttribute('data-title','Ambient Chill');
+			document.getElementById( 'song1').setAttribute('data-album','Happy');
+			document.getElementById( 'song1').setAttribute('data-url','https://www.dropbox.com/s/ne98e4q8v0kfxth/Ambient%20Chill.mp3?raw=1');
+		
+			document.getElementById( 'song2').setAttribute('data-artist','');
+			document.getElementById( 'song2').setAttribute('data-title','Angels Dream');
+			document.getElementById( 'song2').setAttribute('data-album','Happy');
+			document.getElementById( 'song2').setAttribute('data-url','https://www.dropbox.com/s/k98elhifzxc90i6/Angels%20Dream.mp3?raw=1');
+
+			document.getElementById( 'song3').setAttribute('data-artist','');
+			document.getElementById( 'song3').setAttribute('data-title','Celtic night');
+			document.getElementById( 'song3').setAttribute('data-album','Happy');
+			document.getElementById( 'song3').setAttribute('data-url','https://www.dropbox.com/s/hjcg46t576g2363/Celtic%20Night.mp3?raw=1');
+
+			document.getElementById( 'song4').setAttribute('data-artist','');
+			document.getElementById( 'song4').setAttribute('data-title','Daisy Chain');
+			document.getElementById( 'song4').setAttribute('data-album','Happy');
+			document.getElementById( 'song4').setAttribute('data-url','https://www.dropbox.com/s/b4t7toiimdz188r/Daisy%20Chain.mp3?raw=1');
+
+			document.getElementById( 'song5').setAttribute('data-artist','');
+			document.getElementById( 'song5').setAttribute('data-title','Dreamland');
+			document.getElementById( 'song5').setAttribute('data-album','Happy');
+			document.getElementById( 'song5').setAttribute('data-url','https://www.dropbox.com/s/uklsnf3eprh7kpk/Dreamland.mp3?raw=1');
+
+
+			document.getElementById( 'song6').setAttribute('data-artist','');
+			document.getElementById( 'song6').setAttribute('data-title','Frozen In Love');
+			document.getElementById( 'song6').setAttribute('data-album','Happy');
+			document.getElementById( 'song6').setAttribute('data-url','https://www.dropbox.com/s/crxzjaxkpp5kepk/Frozen%20In%20Love.mp3?raw=1');
+
+
+			document.getElementById( 'song7').setAttribute('data-artist','');
+			document.getElementById( 'song7').setAttribute('data-title','Guitar Serenity');
+			document.getElementById( 'song7').setAttribute('data-album','Happy');
+			document.getElementById( 'song7').setAttribute('data-url','https://www.dropbox.com/s/ksqtx6b62ky6ppp/Guitar%20Serenity.mp3?raw=1');
+
+			document.getElementById( 'song8').setAttribute('data-artist','');
+			document.getElementById( 'song8').setAttribute('data-title','Love Spell');
+			document.getElementById( 'song8').setAttribute('data-album','Happy');
+			document.getElementById( 'song8').setAttribute('data-url','https://www.dropbox.com/s/2ktdcatt2psdqw5/Love%20Spell.mp3?raw=1');
+
+			document.getElementById( 'song9').setAttribute('data-artist','');
+			document.getElementById( 'song9').setAttribute('data-title','Peace');
+			document.getElementById( 'song9').setAttribute('data-album','Happy');
+			document.getElementById( 'song9').setAttribute('data-url','https://www.dropbox.com/s/51fj4na6ilufhzq/Peace.mp3?raw=1');
+
+			document.getElementById( 'song10').setAttribute('data-artist','');
+			document.getElementById( 'song10').setAttribute('data-title','Quiet Nights');
+			document.getElementById( 'song10').setAttribute('data-album','Happy');
+			document.getElementById( 'song10').setAttribute('data-url','https://www.dropbox.com/s/se31b4v3zni49vh/Quiet%20Nights.mp3?dl=0');
+
+			document.getElementById( 'song11').setAttribute('data-artist','');
+			document.getElementById( 'song11').setAttribute('data-title','Romance');
+			document.getElementById( 'song11').setAttribute('data-album','Happy');
+			document.getElementById( 'song11').setAttribute('data-url','https://www.dropbox.com/s/86hu167ui0th5fm/Romance.mp3?raw=1');
+
+			document.getElementById( 'song12').setAttribute('data-artist','');
+			document.getElementById( 'song12').setAttribute('data-title','Sea of Memory');
+			document.getElementById( 'song12').setAttribute('data-album','Happy');
+			document.getElementById( 'song12').setAttribute('data-url','https://www.dropbox.com/s/qj1ygpd2of8oype/Sea%20Of%20Memory.mp3?raw=1');
+
+			document.getElementById( 'song13').setAttribute('data-artist','');
+			document.getElementById( 'song13').setAttribute('data-title','The Crystal Sea');
+			document.getElementById( 'song13').setAttribute('data-album','Happy');
+			document.getElementById( 'song13').setAttribute('data-url','https://www.dropbox.com/s/rv66bmv60h0l50j/The%20Crystal%20Sea.mp3?raw=1');
+
+			document.getElementById( 'song14').setAttribute('data-artist','');
+			document.getElementById( 'song14').setAttribute('data-title','Strings of Time');
+			document.getElementById( 'song14').setAttribute('data-album','Happy');
+			document.getElementById( 'song14').setAttribute('data-url','https://www.dropbox.com/s/4e0letov0k9b2ih/Strings%20of%20Time.mp3?raw=1');
+
+
+		}
+
+
+
+		if(plist=="sad"){
+			document.getElementById( 'song1').setAttribute('data-artist','');
+			document.getElementById( 'song1').setAttribute('data-title','Awaiting Return');
+			document.getElementById( 'song1').setAttribute('data-album','Sad');
+			document.getElementById( 'song1').setAttribute('data-url','https://www.dropbox.com/s/6lxnsdqz495c3pi/Awaiting%20Return.mp3?raw=1');
+		
+			document.getElementById( 'song2').setAttribute('data-artist','');
+			document.getElementById( 'song2').setAttribute('data-title','Breathe In Me');
+			document.getElementById( 'song2').setAttribute('data-album','Sad');
+			document.getElementById( 'song2').setAttribute('data-url','https://www.dropbox.com/s/6lxnsdqz495c3pi/Awaiting%20Return.mp3?raw=1');
+
+			document.getElementById( 'song3').setAttribute('data-artist','');
+			document.getElementById( 'song3').setAttribute('data-title','Dawn');
+			document.getElementById( 'song3').setAttribute('data-album','Sad');
+			document.getElementById( 'song3').setAttribute('data-url','https://www.dropbox.com/s/odpcqtva4xkjiqz/Dawn.mp3?raw=1');
+
+			document.getElementById( 'song4').setAttribute('data-artist','');
+			document.getElementById( 'song4').setAttribute('data-title','Lazy Day');
+			document.getElementById( 'song4').setAttribute('data-album','Sad');
+			document.getElementById( 'song4').setAttribute('data-url','https://www.dropbox.com/s/8t2uo5jdpnvgfxy/Lazy%20Day.mp3?raw=1');
+
+			document.getElementById( 'song5').setAttribute('data-artist','');
+			document.getElementById( 'song5').setAttribute('data-title','Looking Up');
+			document.getElementById( 'song5').setAttribute('data-album','Sad');
+			document.getElementById( 'song5').setAttribute('data-url','https://www.dropbox.com/s/luw4xd3bx4c5gta/Looking%20Up.mp3?raw=1');
+
+
+			document.getElementById( 'song6').setAttribute('data-artist','');
+			document.getElementById( 'song6').setAttribute('data-title','Memories');
+			document.getElementById( 'song6').setAttribute('data-album','Sad');
+			document.getElementById( 'song6').setAttribute('data-url','https://www.dropbox.com/s/t0vfu4vwhe3gsgc/Memories.mp3?raw=1');
+
+
+			document.getElementById( 'song7').setAttribute('data-artist','');
+			document.getElementById( 'song7').setAttribute('data-title','Quiet Time');
+			document.getElementById( 'song7').setAttribute('data-album','Sad');
+			document.getElementById( 'song7').setAttribute('data-url','https://www.dropbox.com/s/ukt9r5b7am69unb/Quiet%20Time.mp3?raw=1');
+
+			document.getElementById( 'song8').setAttribute('data-artist','');
+			document.getElementById( 'song8').setAttribute('data-title','Serenity');
+			document.getElementById( 'song8').setAttribute('data-album','Sad');
+			document.getElementById( 'song8').setAttribute('data-url','https://www.dropbox.com/s/yscdfgwoko0534f/Serenity.mp3?raw=1');
+
+			document.getElementById( 'song9').setAttribute('data-artist','');
+			document.getElementById( 'song9').setAttribute('data-title','Simplicity');
+			document.getElementById( 'song9').setAttribute('data-album','Sad');
+			document.getElementById( 'song9').setAttribute('data-url','https://www.dropbox.com/s/66p55otl2j85xf6/Simplicity.mp3?raw=1');
+
+			document.getElementById( 'song10').setAttribute('data-artist','');
+			document.getElementById( 'song10').setAttribute('data-title','Sunshine');
+			document.getElementById( 'song10').setAttribute('data-album','Sad');
+			document.getElementById( 'song10').setAttribute('data-url','https://www.dropbox.com/s/kqdhkundksei5ic/Sunshine.mp3?raw=1');
+
+			document.getElementById( 'song11').setAttribute('data-artist','');
+			document.getElementById( 'song11').setAttribute('data-title','Tender Love');
+			document.getElementById( 'song11').setAttribute('data-album','Sad');
+			document.getElementById( 'song11').setAttribute('data-url','https://www.dropbox.com/s/tvpeeo9a9pyp6sw/Tender%20Love.mp3?raw=1');
+
+			document.getElementById( 'song12').setAttribute('data-artist','');
+			document.getElementById( 'song12').setAttribute('data-title','Twinkle In Night');
+			document.getElementById( 'song12').setAttribute('data-album','Sad');
+			document.getElementById( 'song12').setAttribute('data-url','https://www.dropbox.com/s/eorge9fbhym2lwd/Twinkle%20In%20The%20Night.mp3?raw=1');
+
+			document.getElementById( 'song13').setAttribute('data-artist','');
+			document.getElementById( 'song13').setAttribute('data-title','Vibes');
+			document.getElementById( 'song13').setAttribute('data-album','Sad');
+			document.getElementById( 'song13').setAttribute('data-url','https://www.dropbox.com/s/23wv31rwthvoocr/Vibes.mp3?raw=1');
+
+			document.getElementById( 'song14').setAttribute('data-artist','');
+			document.getElementById( 'song14').setAttribute('data-title','We Are The Rain');
+			document.getElementById( 'song14').setAttribute('data-album','Sad');
+			document.getElementById( 'song14').setAttribute('data-url','https://www.dropbox.com/s/bfu30vnvxone36q/We%20Are%20The%20Rain.mp3?raw=1');
+		}
+
+
+		if(plist=="angry"){
+			document.getElementById( 'song1').setAttribute('data-artist','');
+			document.getElementById( 'song1').setAttribute('data-title','Calm Relaxing');
+			document.getElementById( 'song1').setAttribute('data-album','Angry');
+			document.getElementById( 'song1').setAttribute('data-url','https://www.dropbox.com/s/a1wqhl2u8hncpt4/Calm%20Relaxing.mp3?raw=1');
+		
+			document.getElementById( 'song2').setAttribute('data-artist','');
+			document.getElementById( 'song2').setAttribute('data-title','Contemplate');
+			document.getElementById( 'song2').setAttribute('data-album','Angry');
+			document.getElementById( 'song2').setAttribute('data-url','https://www.dropbox.com/s/wx3iws61ooyjgdx/Contemplate.mp3?raw=1');
+
+			document.getElementById( 'song3').setAttribute('data-artist','');
+			document.getElementById( 'song3').setAttribute('data-title','Deep Meditation');
+			document.getElementById( 'song3').setAttribute('data-album','Angry');
+			document.getElementById( 'song3').setAttribute('data-url','https://www.dropbox.com/s/pqnsa61m8jgkjuw/Deep%20Meditation.mp3?raw=1');
+
+			document.getElementById( 'song4').setAttribute('data-artist','');
+			document.getElementById( 'song4').setAttribute('data-title','Healing Water');
+			document.getElementById( 'song4').setAttribute('data-album','Angry');
+			document.getElementById( 'song4').setAttribute('data-url','https://www.dropbox.com/s/pkopf6nwtljbfp5/Healing%20Water.mp3?raw=1');
+
+			document.getElementById( 'song5').setAttribute('data-artist','');
+			document.getElementById( 'song5').setAttribute('data-title','Holy');
+			document.getElementById( 'song5').setAttribute('data-album','Angry');
+			document.getElementById( 'song5').setAttribute('data-url','https://www.dropbox.com/s/ps4croybm9t829v/Holy.mp3?raw=1');
+
+
+			document.getElementById( 'song6').setAttribute('data-artist','');
+			document.getElementById( 'song6').setAttribute('data-title','Hymn');
+			document.getElementById( 'song6').setAttribute('data-album','Angry');
+			document.getElementById( 'song6').setAttribute('data-url','https://www.dropbox.com/s/07xxecjgzzmi8v6/Hymn.mp3?raw=1');
+
+
+			document.getElementById( 'song7').setAttribute('data-artist','');
+			document.getElementById( 'song7').setAttribute('data-title','Infinite Perspective');
+			document.getElementById( 'song7').setAttribute('data-album','Angry');
+			document.getElementById( 'song7').setAttribute('data-url','https://www.dropbox.com/s/cfmh15azdy8dya8/Infinite%20Perspective.mp3?raw=1');
+
+			document.getElementById( 'song8').setAttribute('data-artist','');
+			document.getElementById( 'song8').setAttribute('data-title','Meditation Day');
+			document.getElementById( 'song8').setAttribute('data-album','Angry');
+			document.getElementById( 'song8').setAttribute('data-url','https://www.dropbox.com/s/q2falpv57ukug0y/Meditation%20Day.mp3?raw=1');
+
+			document.getElementById( 'song9').setAttribute('data-artist','');
+			document.getElementById( 'song9').setAttribute('data-title','Meditation Impromptu');
+			document.getElementById( 'song9').setAttribute('data-album','Angry');
+			document.getElementById( 'song9').setAttribute('data-url','https://www.dropbox.com/s/jasq1ott0lowkbd/Meditation%20Impromptu.mp3?raw=1');
+
+			document.getElementById( 'song10').setAttribute('data-artist','');
+			document.getElementById( 'song10').setAttribute('data-title','Meditation');
+			document.getElementById( 'song10').setAttribute('data-album','Angry');
+			document.getElementById( 'song10').setAttribute('data-url','https://www.dropbox.com/s/ta66h07hhk1pqew/Meditation.mp3?raw=1');
+
+			document.getElementById( 'song11').setAttribute('data-artist','');
+			document.getElementById( 'song11').setAttribute('data-title','Reflections');
+			document.getElementById( 'song11').setAttribute('data-album','Angry');
+			document.getElementById( 'song11').setAttribute('data-url','https://www.dropbox.com/s/vxtg7u93obdn45q/Reflections.mp3?raw=1');
+
+			document.getElementById( 'song12').setAttribute('data-artist','');
+			document.getElementById( 'song12').setAttribute('data-title','Solitary');
+			document.getElementById( 'song12').setAttribute('data-album','Angry');
+			document.getElementById( 'song12').setAttribute('data-url','https://www.dropbox.com/s/7c1gu8ug1gcfc1e/Solitary.mp3?raw=1');
+
+			document.getElementById( 'song13').setAttribute('data-artist','');
+			document.getElementById( 'song13').setAttribute('data-title','Tranquility');
+			document.getElementById( 'song13').setAttribute('data-album','Angry');
+			document.getElementById( 'song13').setAttribute('data-url','https://www.dropbox.com/s/tao27cra7smvp9j/Tranquility.mp3?raw=1');
+
+			document.getElementById( 'song14').setAttribute('data-artist','');
+			document.getElementById( 'song14').setAttribute('data-title','Yoga and Zen');
+			document.getElementById( 'song14').setAttribute('data-album','Angry');
+			document.getElementById( 'song14').setAttribute('data-url','https://www.dropbox.com/s/v2juc3rk23iptj5/Yoga%20And%20Zen.mp3?raw=1');
+		}
+
+
+		if(plist=="fear"){
+			document.getElementById( 'song1').setAttribute('data-artist','');
+			document.getElementById( 'song1').setAttribute('data-title','Backpacking');
+			document.getElementById( 'song1').setAttribute('data-album','Fear');
+			document.getElementById( 'song1').setAttribute('data-url','https://www.dropbox.com/s/pp20m3d5rx38vap/Backpacking.mp3?raw=1');
+		
+			document.getElementById( 'song2').setAttribute('data-artist','');
+			document.getElementById( 'song2').setAttribute('data-title','Beautiful Memories');
+			document.getElementById( 'song2').setAttribute('data-album','Fear');
+			document.getElementById( 'song2').setAttribute('data-url','https://www.dropbox.com/s/z2y6wt4pp24t4cn/Beautiful%20Memories.mp3?raw=1');
+
+			document.getElementById( 'song3').setAttribute('data-artist','');
+			document.getElementById( 'song3').setAttribute('data-title','Childhood Nostalgia');
+			document.getElementById( 'song3').setAttribute('data-album','Fear');
+			document.getElementById( 'song3').setAttribute('data-url','https://www.dropbox.com/s/mapne7gr6psjaa5/Childhood%20Nostalgia.mp3?raw=1');
+
+			document.getElementById( 'song4').setAttribute('data-artist','');
+			document.getElementById( 'song4').setAttribute('data-title','Epiphany');
+			document.getElementById( 'song4').setAttribute('data-album','Fear');
+			document.getElementById( 'song4').setAttribute('data-url','https://www.dropbox.com/s/f8f5psgq3jia88n/Epiphany.mp3?raw=1');
+
+			document.getElementById( 'song5').setAttribute('data-artist','');
+			document.getElementById( 'song5').setAttribute('data-title','Fairy Dance');
+			document.getElementById( 'song5').setAttribute('data-album','Fear');
+			document.getElementById( 'song5').setAttribute('data-url','https://www.dropbox.com/s/3daukdsdpoxmtmw/Fairy%20Dance.mp3?raw=1');
+
+
+			document.getElementById( 'song6').setAttribute('data-artist','');
+			document.getElementById( 'song6').setAttribute('data-title','Falling Snow');
+			document.getElementById( 'song6').setAttribute('data-album','Fear');
+			document.getElementById( 'song6').setAttribute('data-url','https://www.dropbox.com/s/s9kq93uq5rzlrim/Falling%20Snow.mp3?raw=1');
+
+
+			document.getElementById( 'song7').setAttribute('data-artist','');
+			document.getElementById( 'song7').setAttribute('data-title','Friends');
+			document.getElementById( 'song7').setAttribute('data-album','Fear');
+			document.getElementById( 'song7').setAttribute('data-url','https://www.dropbox.com/s/0ddq1qko0vysmzz/Friends.mp3?raw=1');
+
+			document.getElementById( 'song8').setAttribute('data-artist','');
+			document.getElementById( 'song8').setAttribute('data-title','Instrumental');
+			document.getElementById( 'song8').setAttribute('data-album','Fear');
+			document.getElementById( 'song8').setAttribute('data-url','https://www.dropbox.com/s/pjy9q1tii682t1n/Instrumental.mp3?raw=1');
+
+			document.getElementById( 'song9').setAttribute('data-artist','');
+			document.getElementById( 'song9').setAttribute('data-title','Magic');
+			document.getElementById( 'song9').setAttribute('data-album','Fear');
+			document.getElementById( 'song9').setAttribute('data-url','https://www.dropbox.com/s/4s6uwmv6x9mzcks/Magic.mp3?raw=1');
+
+			document.getElementById( 'song10').setAttribute('data-artist','');
+			document.getElementById( 'song10').setAttribute('data-title','Mellow Thoughts');
+			document.getElementById( 'song10').setAttribute('data-album','Fear');
+			document.getElementById( 'song10').setAttribute('data-url','https://www.dropbox.com/s/iwn00g6r8jjzkgg/Mellow%20Thoughts.mp3?raw=1');
+
+			document.getElementById( 'song11').setAttribute('data-artist','');
+			document.getElementById( 'song11').setAttribute('data-title','Mystery');
+			document.getElementById( 'song11').setAttribute('data-album','Fear');
+			document.getElementById( 'song11').setAttribute('data-url','https://www.dropbox.com/s/g89tkz0566bxm8u/Mystery.mp3?raw=1');
+
+			document.getElementById( 'song12').setAttribute('data-artist','');
+			document.getElementById( 'song12').setAttribute('data-title','Relaxation');
+			document.getElementById( 'song12').setAttribute('data-album','Fear');
+			document.getElementById( 'song12').setAttribute('data-url','https://www.dropbox.com/s/bb1lfjxi33ni7iq/Relaxation.mp3?raw=1');
+
+			document.getElementById( 'song13').setAttribute('data-artist','');
+			document.getElementById( 'song13').setAttribute('data-title','Warm Light');
+			document.getElementById( 'song13').setAttribute('data-album','Fear');
+			document.getElementById( 'song13').setAttribute('data-url','https://www.dropbox.com/s/vu2di0rtmiqbaeo/Warm%20Light.mp3?raw=1');
+
+			document.getElementById( 'song14').setAttribute('data-artist','');
+			document.getElementById( 'song14').setAttribute('data-title','Waterfall');
+			document.getElementById( 'song14').setAttribute('data-album','Fear');
+			document.getElementById( 'song14').setAttribute('data-url','https://www.dropbox.com/s/3h23z392amhj11s/Waterfall.mp3?raw=1');
+		}
+
+
+		if(plist=="neutral"){
+			document.getElementById( 'song1').setAttribute('data-artist','');
+			document.getElementById( 'song1').setAttribute('data-title','An Ambient Day');
+			document.getElementById( 'song1').setAttribute('data-album','Neutral');
+			document.getElementById( 'song1').setAttribute('data-url','https://www.dropbox.com/s/ldcb9xjxyxx0nbk/An%20Ambient%20Day.mp3?raw=1');
+		
+			document.getElementById( 'song2').setAttribute('data-artist','');
+			document.getElementById( 'song2').setAttribute('data-title','Bright Morning');
+			document.getElementById( 'song2').setAttribute('data-album','Neutral');
+			document.getElementById( 'song2').setAttribute('data-url','https://www.dropbox.com/s/9o5y6roniheba93/Bright%20Morning.mp3?raw=1');
+
+			document.getElementById( 'song3').setAttribute('data-artist','');
+			document.getElementById( 'song3').setAttribute('data-title','Cathedral Ambience');
+			document.getElementById( 'song3').setAttribute('data-album','Neutral');
+			document.getElementById( 'song3').setAttribute('data-url','https://www.dropbox.com/s/hcajcetrdrl622n/Cathedral%20Ambience.mp3?raw=1');
+
+			document.getElementById( 'song4').setAttribute('data-artist','');
+			document.getElementById( 'song4').setAttribute('data-title','Clara De Luna');
+			document.getElementById( 'song4').setAttribute('data-album','Neutral');
+			document.getElementById( 'song4').setAttribute('data-url','https://www.dropbox.com/s/i5w6v5m145hq3zo/Clara%20De%20Luna.mp3?raw=1');
+
+			document.getElementById( 'song5').setAttribute('data-artist','');
+			document.getElementById( 'song5').setAttribute('data-title','Dusk');
+			document.getElementById( 'song5').setAttribute('data-album','Neutral');
+			document.getElementById( 'song5').setAttribute('data-url','https://www.dropbox.com/s/2xkyaue3mjeuneb/Dusk.mp3?raw=1');
+
+
+			document.getElementById( 'song6').setAttribute('data-artist','');
+			document.getElementById( 'song6').setAttribute('data-title','Elven Forest');
+			document.getElementById( 'song6').setAttribute('data-album','Neutral');
+			document.getElementById( 'song6').setAttribute('data-url','https://www.dropbox.com/s/kquep7n1q013rk1/Elven%20Forest.mp3?raw=1');
+
+
+			document.getElementById( 'song7').setAttribute('data-artist','');
+			document.getElementById( 'song7').setAttribute('data-title','Equinox');
+			document.getElementById( 'song7').setAttribute('data-album','Neutral');
+			document.getElementById( 'song7').setAttribute('data-url','https://www.dropbox.com/s/fgf7uwxfao18y08/Equinox.mp3?raw=1');
+
+			document.getElementById( 'song8').setAttribute('data-artist','');
+			document.getElementById( 'song8').setAttribute('data-title','Excuse');
+			document.getElementById( 'song8').setAttribute('data-album','Neutral');
+			document.getElementById( 'song8').setAttribute('data-url','https://www.dropbox.com/s/rcldxufpkaxm6ky/Excuse.mp3?raw=1');
+
+			document.getElementById( 'song9').setAttribute('data-artist','');
+			document.getElementById( 'song9').setAttribute('data-title','First Light');
+			document.getElementById( 'song9').setAttribute('data-album','Neutral');
+			document.getElementById( 'song9').setAttribute('data-url','https://www.dropbox.com/s/n15865iy89xuuss/First%20Light.mp3?raw=1');
+
+			document.getElementById( 'song10').setAttribute('data-artist','');
+			document.getElementById( 'song10').setAttribute('data-title','Green Nature');
+			document.getElementById( 'song10').setAttribute('data-album','Neutral');
+			document.getElementById( 'song10').setAttribute('data-url','https://www.dropbox.com/s/juaf26qbx3o37yj/Green%20Nature.mp3?raw=1');
+
+			document.getElementById( 'song11').setAttribute('data-artist','');
+			document.getElementById( 'song11').setAttribute('data-title','Heuristics For The Brain');
+			document.getElementById( 'song11').setAttribute('data-album','Neutral');
+			document.getElementById( 'song11').setAttribute('data-url','https://www.dropbox.com/s/apnleiho01nhszo/Heuristics%20For%20The%20Brain.mp3?raw=1');
+
+			document.getElementById( 'song12').setAttribute('data-artist','');
+			document.getElementById( 'song12').setAttribute('data-title','In The Light');
+			document.getElementById( 'song12').setAttribute('data-album','Neutral');
+			document.getElementById( 'song12').setAttribute('data-url','https://www.dropbox.com/s/uw1ijczi04h7mkq/In%20The%20Light.mp3?raw=1');
+
+			document.getElementById( 'song13').setAttribute('data-artist','');
+			document.getElementById( 'song13').setAttribute('data-title','In The Moment');
+			document.getElementById( 'song13').setAttribute('data-album','Neutral');
+			document.getElementById( 'song13').setAttribute('data-url','https://www.dropbox.com/s/bzr47dyals37mum/In%20The%20Moment.mp3?raw=1');
+
+			document.getElementById( 'song14').setAttribute('data-artist','');
+			document.getElementById( 'song14').setAttribute('data-title','Lotus Blossom');
+			document.getElementById( 'song14').setAttribute('data-album','Neutral');
+			document.getElementById( 'song14').setAttribute('data-url','https://www.dropbox.com/s/a1vnxniam3uln6s/Lotus%20Blossom.mp3?raw=1');
+		}
+
+</script>
+<script src="../js/jquery.js"></script>
+     <script src="../js/jquery.scrollTo.js"></script>
+     <script src="../js/jquery.nav.js"></script>
+     <script src="../js/jquery.localScroll.js"></script>
+     <script src="../js/bootstrap.js"></script>
+     <script src="../js/jquery.prettyPhoto.js"></script>
+     <script src="../js/isotope.js"></script>
+     <script src="../js/jquery.flexslider.js"></script>
+     <script src="../js/inview.js"></script>
+     <script src="../js/animate.js"></script>
+     <script src="../js/custom.js"></script>
+     <script src="../contactform/contactform.js"></script>
+
+</body>
+</html>

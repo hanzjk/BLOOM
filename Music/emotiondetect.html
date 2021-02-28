@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mood Detection for Music Player</title>
+    <script defer src="face-api.min.js"></script>
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link href="../color/default.css" rel="stylesheet">
+<link rel="shortcut icon" href="../img/favicon.ico">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<style> 
+body {
+
+
+  /* The image used */
+  background: url('bg.jpeg') center ;     
+    background-size: cover;
+   
+  
+}
+/* The Modal (background) */
+.modal2 {
+  margin-top: 5%;
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */ 
+   /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */ 
+.modal-content2 {
+  margin-top:120%;
+  background-color: #ffffffad;
+  margin: auto;
+  padding: 10px;
+  padding-left: 8%;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-content2 button{
+  background-color: transparent;
+  border: transparent;
+ 
+}
+
+.modal-content2 button:hover{
+  background-color: #696969;
+  color: azure;
+
+}
+
+.box{
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-top: 14%;
+  background-color: #5dcac17e;
+}
+.box button{
+  
+  margin-left: 9%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+
+  display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+}
+
+.box button:active {
+  transform: translateY(4px);
+}
+
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  margin-left: 0%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #0c0b0b;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid rgb(5, 92, 56);
+  width: 50%;
+} 
+
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 400%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+/* Modal Content */
+.modal-content1 {
+  background-color: #58d4cebb;
+  border-radius: 4px;
+  margin: auto;
+  padding: 10%;
+  border: 1px solid rgb(247, 243, 243);
+  width: 30%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+
+
+
+.modal-content1 button{
+    background-color: #0a8076;
+    border: 1px solid rgb(8, 94, 75);
+    border-radius: 8px;
+    color: aliceblue;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-left: 1%;
+  margin-top: 10%;
+
+}
+
+
+.info{
+  padding-top: 10%;
+  margin-top: 10%;
+  margin-left: 7%;
+  text-align:left;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* @media only screen and (max-width: 480px) {
+ 
+
+  .modal2{
+    padding-top: 10%;
+    margin-top: 10%;
+    display: inline;
+    margin-bottom: 20%;
+  }
+
+  .modal-content2{
+    padding-top: 25%;
+  }
+  
+  .container{
+    height:1%;
+    
+  }
+     
+} */
+
+</style>
+</head>
+<body>
+ 
+  <!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+					<h1 class="brand"><a href="#">MOOD DETECTION FOR MUSIC PLAYER</a></h1>
+					<!-- navigation -->
+					<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+							<li><a title="team" href="../index.html">Home</a></li>
+							<li><a title="blog" href="../MusicHelp.html">Music Player Help</a></li>
+							<li><a title="contact" href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+  </div>
+
+ 
+    
+  </div>
+  
+    <div class="box">
+    
+      <div class="info">
+        <ul>
+        <li>Click on Camera icon to scan the face and generate play list.</li><br>
+        <li>Play list will be generated based on the users 'facial expressions.</li><br>
+        <li>You can skip face scan option and select a playlist according to your mood by clicking the right button.</li><br>
+        <li>You can also skip the detected mood and select a mood by yourself.</li>
+       </ul>
+      
+      
+       <div style="display:inline-block;padding-left: 22%;"><button id="myBtn" type="button" style="margin-right: auto; margin-left: auto;width: 100px;"><img src="cam.jpg">
+       </button></div>         
+       <div style="display:inline-block;padding-left: 22%;"><button id="myBtn2" type="button" style="margin-right: auto; margin-left: auto;width: 100px;"><img src="no-camera.png">
+       </button></div>
+       
+
+    </div>
+    </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        
+        <video id="video" width="100%" height="1%" autoplay muted></video>
+        
+        <div id="myModal1" class="modal1">
+        <div class="modal-content1">
+            <img id ="emotion"> 
+            <p id="moodName" style="color: black;"></p>
+            <div id="advanced-search" class="form-group form-action col-md-12">
+             <button type="submit" class="btn-search btn btn-flat-alizarin" onclick="setData()">OK</button>
+             <button type="button" id="myBtn2" class="btn-search btn btn-flat-alizarin" >NO</button>
+             
+            </div>
+      
+          </div>
+          </div>
+        
+        </div>
+   
+  </div>
+
+
+  
+  <div id="myModal2" class="modal2">
+
+    <!-- Modal content -->
+    <div class="modal-content2">
+      <h3 style="text-align: center;">SELECT YOUR MODE</h3>
+      <br>
+    <br>
+      <button  id="myBtnhappy" type="submit" class="btns" style="width: 18%; padding-top: 1%;"><img src="happy.jpg" style="margin-right: auto;margin-left: auto; width: 25%;display: block;"> <br> <p>HAPPY</p> </button>
+      <button  id="myBtnsad" type="submit" class="btns" style="width: 18%; padding-top: 1%;"><img src="sad.jpg" style="margin-right: auto;margin-left: auto; width: 25%;display: block;"> <br> <p>SAD</p></button>
+      <button  id="myBtnangry" type="submit" class="btns" style="width: 18%; padding-top: 1%"><img src="angry.jpg" style="margin-right: auto;margin-left: auto; width: 25%;display: block;"><br> <p>ANGRY</p> </button>
+      <button  id="myBtnfear" type="submit" class="btns" style="width: 18%; padding-top: 1%"><img src="fear.jpg" style="margin-right: auto;margin-left: auto; width: 25%;display: block;"><br> <p>FEAR</p> </button>
+      <button  id="myBtnneut" type="submit" class="btns" style="width: 18%; padding-top: 1%"><img src="neut.jpg" style="margin-right: auto;margin-left: auto; width: 25%;display: block;"><br> <p>NEUTRAL</p> </button>
+      
+     
+    </div>
+  
+  </div>
+ <br><br><br><br><br><br><br><br>
+
+ <section id="contact">
+ <footer>
+    <div class="container">
+      <div class="row">
+        <div class="span6 offset3">
+          <ul class="social-networks">
+            <li><a href = "mailto: chatbotse2020@gmail.com"><i class="icon-circled icon-bgdark icon-envelope icon-3x"></i></a></li>
+            
+          </ul>
+          <p class="copyright">
+            &copy;  All rights reserved.
+            <div class="credits">
+              
+              Designed by Team BLOOM</a>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+</section> 
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var modal2 = document.getElementById("myModal2");
+    var emotion = "";
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    var btnnn = document.getElementById("myBtnnn");
+    var btn1 = document.getElementById("myBtn2");
+    
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+             var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "musicscript.js"; 
+            document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    btn1.onclick = function() {
+        modal.style.display="none";
+ 
+        modal2.style.display = "block";
+
+      }
+
+      var btnhappy = document.getElementById("myBtnhappy");
+      var btnsad = document.getElementById("myBtnsad");
+      var btnangry = document.getElementById("myBtnangry");
+      var btnneut = document.getElementById("myBtnneut");
+      var btnfear = document.getElementById("myBtnfear");
+     
+      btnhappy.onclick = function() {
+        
+        var user="happy";
+       localStorage.setItem('user',"happy"); 
+     //  location.href = "index.html";
+       emotion = "Happy";
+       setData();
+
+      }
+
+      btnsad.onclick = function() {
+        var user="sad";
+       localStorage.setItem('user',"sad");
+       // location.href = "index.html";
+        emotion = "Sad";
+        setData();
+
+      }
+
+      btnangry.onclick = function() {
+        var user="angry";
+       localStorage.setItem('user',"angry");
+      //  location.href = "index.html";
+        emotion = "Angry";
+        setData();
+
+      }
+
+      btnneut.onclick = function() {
+        var user="neutral";
+       localStorage.setItem('user',"neutral");
+       // location.href = "index.html";
+        emotion = "Neutral";
+        setData();
+
+      }
+
+      btnfear.onclick = function() {
+        var user="fear";
+       localStorage.setItem('user',"fear");
+        //location.href = "index.html";
+        emotion = "Fearful";
+        setData();
+
+      }
+
+      function setData(){
+        $.post("getMood.php",
+        {
+           emotion,
+        
+        },);
+         window.location.href = "index.html";
+      }
+  
+    </script>
+     <script src="../js/jquery.js"></script>
+     <script src="../js/jquery.scrollTo.js"></script>
+     <script src="../js/jquery.nav.js"></script>
+     <script src="../js/jquery.localScroll.js"></script>
+     <script src="../js/bootstrap.js"></script>
+     <script src="../js/jquery.prettyPhoto.js"></script>
+     <script src="../js/isotope.js"></script>
+     <script src="../js/jquery.flexslider.js"></script>
+     <script src="../js/inview.js"></script>
+     <script src="../js/animate.js"></script>
+     <script src="../js/custom.js"></script>
+     <script src="../contactform/contactform.js"></script>
+</body>
+</html>

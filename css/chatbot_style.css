@@ -1,0 +1,10 @@
+df-messenger{
+    --df-messenger-button-titlebar-color: #3EB489;
+    --df-messenger-send-icon: #3EB489;
+    --df-messenger-user-message: #ace1af;
+    --df-messenger-chat-background-color:#e5e4e2;
+}
+
+body{
+    background-image: url("../img/new1-2.jpg");
+}

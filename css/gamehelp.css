@@ -1,0 +1,146 @@
+                * {
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    overflow-x: hidden;
+                }
+                
+                ul {
+                    color: black;
+                    align-items: center;
+                    margin-left: 0.3mm;
+                }
+                
+                .bg {
+                    animation: slide 3s ease-in-out infinite alternate;
+                    background-image: linear-gradient(-60deg, #50C878 50%, #09f 50%);
+                    bottom: 0;
+                    left: -50%;
+                    opacity: .5;
+                    position: fixed;
+                    right: -50%;
+                    top: 0;
+                    z-index: -1;
+                }
+                
+                .imghelp {
+                    margin-right: auto;
+                    margin-left: auto;
+                    display: block;
+                    width: 300px;
+                }
+                
+                .bg2 {
+                    animation-direction: alternate-reverse;
+                    animation-duration: 4s;
+                }
+                
+                .bg3 {
+                    animation-duration: 5s;
+                }
+                
+                .content {
+                    padding-top: 1%;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border-radius: .25em;
+                    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+                    box-sizing: border-box;
+                    left: 50%;
+                    padding: 10vmin;
+                    position: relative;
+                    top: 1850px;
+                    width: 70%;
+                    transform: translate(-50%, -50%);
+                }
+                
+                .column {
+                    float: left;
+                    width: 100%;
+                    padding: 2%;
+                }
+                
+                .row1:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                
+                .row2:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                
+                .row3:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                
+                .row4:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                
+                .row5:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                /* Responsive columns */
+                
+                @media screen and (max-width: 499px) {
+                    .row4:after {
+                        display: none;
+                    }
+                    .row5:after {
+                        display: none;
+                    }
+                    .content {
+                        top: 1500px;
+                    }
+                    footer {
+                        top: 10vh;
+                    }
+                    .card2 {
+                        display: none;
+                    }
+                }
+                /* Style the counter cards */
+                
+                .card {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.521);
+                    padding: 2%;
+                    text-align: center;
+                    color: white;
+                    border-radius: 0.9rem;
+                }
+                
+                .card2 {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.521);
+                    padding: 2%;
+                    text-align: center;
+                    color: white;
+                    border-radius: 0.9rem;
+                }
+                
+                h1 {
+                    font-family: monospace;
+                }
+                
+                @keyframes slide {
+                    0% {
+                        transform: translateX(-25%);
+                    }
+                    100% {
+                        transform: translateX(25%);
+                    }
+                }
+                
+                footer {
+                    top: 50vh;
+                    position: relative;
+                    width: 100vw;
+                }

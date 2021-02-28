@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Germania+One" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakout Game</title>
+</head>
+
+<body>
+
+    <div class="heading">
+        BREAKOUT
+
+        <div class="icon-bar">
+            <a href="../../index.html"><i class="fa fa-home"></i></a>
+            <a href="../../games.html"><i class="fa fa-gamepad"></i></a>
+            <a href="../../Music/emotiondetect.html"><i class="fa fa-music"></i></a>
+            <a href="../../chatbot.html"><i class="fa fa-comments"></i></a>
+        </div>
+    </div>
+
+
+
+
+    <div class="main-content">
+        <div id="sub-content">
+            <canvas id="BreakOut" width="400" height="500"></canvas>
+
+            <div id="gameover">
+                <img src="youwon.png" alt="" id="youwon">
+                <img src="gameover.png" alt="" id="youlose">
+                <div id="restart">Play Again!</div>
+            </div>
+
+        </div>
+
+        <div class="Sound"><img src="SOUND_ON.png" alt="" id="sound"></div>
+    </div>
+    <script src="component.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+/*Feedback Forms*/
+.row::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+input[type=submit]{
+	background-color: #008B8B;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=text],textarea{
+	width: 100%;
+	padding: 12px;
+	border: 1px solid rgb(70, 68, 68);
+	border-radius: 4px;
+	resize: vertical;
+}
+
+input[type=submit]:hover{
+	background-color: #3EB489;
+}
+
+label{
+	display: inline-block;
+}
+
+.ftext{
+	padding-left: 6%;
+	font-size: 300px;
+}
+
+
+.farea{
+	padding-left: 6%;
+	padding-right: 6%;
+}
+
+
+.feed{
+    padding-bottom: 10%;
+}
+
+.feedtopic{
+    text-align: center;
+    color: white;
+    font-size: 350%;
+    font-weight: bold;
+    padding-bottom: 2%;
+}

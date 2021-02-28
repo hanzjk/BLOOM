@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Face Detection</title>
+    <script defer src="face-api.min.js"></script>
+    <link rel="stylesheet" href="styleback.css">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+	  <link href="../css/style.css" rel="stylesheet">
+     <link href="../color/default.css" rel="stylesheet">
+     <link rel="shortcut icon" href="../img/favicon.ico">
+     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<style>
+  
+* {
+  box-sizing: border-box;
+}
+
+    
+.box{
+        
+  position: absolute;
+  width: 55%;
+  height: 53%;
+  z-index: 100;
+  top: 50%;
+  left: 25%;
+  margin: -10% 0 0 -1%;
+  background: #70c9cca4;
+    }
+
+    .box img{
+        margin-top: 6%;
+        margin-left: 5%;
+        float: left;
+    }
+.box ul{
+    margin-top: 20%;
+    padding-left: 10%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 97%;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #2a2e2c;
+font-weight: bold;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+.box button{
+    background-color: #030211;
+    border-radius: 8px;
+    color: rgb(180, 243, 235);
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-left: 25%;
+
+}
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  margin-left: 0%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #0c0b0b;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid rgb(87, 131, 214);
+  width: 50%;
+} 
+
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 20%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 400%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content1 {
+  background-color: #58d4cebb;
+  border-radius: 4px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgb(247, 243, 243);
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.modal-content1 button{
+    background-color: #0a8076;
+    border: 1px solid rgb(8, 94, 75);
+    border-radius: 8px;
+    color: aliceblue;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-left: 5%;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .box{
+    margin-top:-30%;
+    height: 60%;
+  }
+  .box ul{
+    margin-top: 70%;
+    margin-left: -38%;
+    font-size: 85%;
+  }
+  .box img{
+     margin-left: 37%;
+  }
+  .box button{
+    margin-left:4%;
+  }
+
+  
+}
+
+  
+
+</style>
+</head>
+
+<body>
+   	<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+					<h1 class="brand"><a href="#">FACE SCAN</a></h1>
+					<!-- navigation -->
+					<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+							<li><a title="team" href="../index.html">Home</a></li>
+							<li><a title="services" href="../index.html#help">Help</a></li>
+						
+              <li><a title="contact" href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+    <div class="box">
+      <img src="face1.png"  width="34%">
+      <div style='margin-left: 33%'>
+      <p><ul>
+          <li>Curious what emotions your face shows?<br></li>
+          <li>Many of us struggle to identify what exactly we are feeling.</li>
+          <li>We will help you to discover your true feelings and  calm your nerves
+        </ul>
+        </p>
+        <button id="myBtn"type="button" >START</button>
+
+        
+        </div>
+      </div>
+    </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        
+        <video id="video" width="100%" height="1%" autoplay muted></video>
+        
+        <div id="myModal1" class="modal1">
+        <div class="modal-content1">
+            <p id =emotion></p>
+            <div id="advanced-search" class="form-group form-action col-md-12">
+             <button  type="submit"  class="btn-search btn btn-flat-alizarin" onclick="saveData()">OK</button>
+              
+            </div>
+      
+          </div>
+          </div>
+        
+        </div>
+   
+  </div>
+ 
+<!-- partial:index.partial.html -->
+<svg id="demo" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0" color-interpolation="sRGB">
+      <stop id="stop1a" offset="0%" stop-color="#12a3b4"></stop>
+      <stop id="stop1b" offset="100%" stop-color="#ff509e"></stop>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="0" color-interpolation="sRGB">
+      <stop id="stop2a" offset="0%" stop-color="#e3bc13"></stop>
+      <stop id="stop2b" offset="100%" stop-color="#00a78f"></stop>
+    </linearGradient>
+  </defs>
+  <rect id="rect1" x="0" y="0" width="1600" height="600" stroke="none" fill="url(#grad1)"></rect>
+  <rect id="rect2" x="0" y="0" width="1600" height="600" stroke="none" fill="url(#grad2)"></rect>
+</svg>
+
+<section id="contact">
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="span6 offset3">
+        <ul class="social-networks">
+          <li><a href = "mailto: chatbotse2020@gmail.com"><i class="icon-circled icon-bgdark icon-envelope icon-3x"></i></a></li>
+          
+        </ul>
+        <p class="copyright">
+          &copy;  All rights reserved.
+          <div class="credits">
+            
+            Designed by Team BLOOM</a>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- ./container -->
+</footer></section>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js'></script><script  src="./scriptback.js"></script>
+
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+        var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "script.js"; 
+            document.getElementsByTagName("head")[0].appendChild(script);
+
+       
+    }
+    
+  
+
+    
+  
+    </script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.scrollTo.js"></script>
+<script src="../js/jquery.nav.js"></script>
+<script src="../js/jquery.localScroll.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery.prettyPhoto.js"></script>
+<script src="../js/isotope.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script src="../js/inview.js"></script>
+<script src="../js/animate.js"></script>
+<script src="../js/custom.js"></script>
+
+</body>
+</html>

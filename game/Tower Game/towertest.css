@@ -1,0 +1,598 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+img {
+    width: 100%
+}
+
+html {
+    background: #FFF;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #98e2e7 url(./assets/mainbg.jpg);
+    background-repeat: no-repeat;
+}
+
+.icon-bar {
+    width: 5%;
+    top: 5%;
+    background-color: #555;
+}
+
+.icon-bar a {
+    top: 500px;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: rgb(27, 155, 206);
+}
+
+.active {
+    background-color: #e4e734;
+}
+
+@media screen and (min-height: 560px) {
+    html {
+        font-size: 100px
+    }
+}
+
+@media screen and (min-height: 640px) {
+    html {
+        font-size: 112.5px
+    }
+}
+
+@media screen and (min-height: 720px) {
+    html {
+        font-size: 125px
+    }
+}
+
+@media screen and (min-height: 800px) {
+    html {
+        font-size: 137.5px
+    }
+}
+
+@media screen and (min-height: 880px) {
+    html {
+        font-size: 150px
+    }
+}
+
+@media screen and (min-height: 960px) {
+    html {
+        font-size: 162.5px
+    }
+}
+
+@media screen and (min-height: 1040px) {
+    html {
+        font-size: 180px
+    }
+}
+
+@media screen and (min-height: 1200px) {
+    html {
+        font-size: 200px
+    }
+}
+
+html {
+    font-size: 17.6vh
+}
+
+#canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+a {
+    text-decoration: none
+}
+
+.heading {
+    background-color: rgba(22, 122, 153, 0.575);
+    height: 8%;
+    width: 100vw;
+    font-family: 'Grandstander', cursive;
+    text-align: center;
+    color: rgb(218, 231, 31);
+    top: 100px;
+    bottom: 400px;
+    z-index: 2;
+    font-size: 70px;
+}
+
+.hide {
+    display: none
+}
+
+.clear {
+    clear: both
+}
+
+.loading {
+    background-color: #3c28c0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.loading .main {
+    width: 60%;
+    margin: 0 auto;
+    color: rgb(116, 152, 175)
+}
+
+.loading .main img {
+    width: 60%;
+    margin: 1rem auto 0
+}
+
+.loading .main .title {
+    font-size: .3rem
+}
+
+.loading .main .text {
+    font-size: 40px;
+    font-family: 'Satisfy', cursive;
+}
+
+.loading .main .bar {
+    height: .12rem;
+    width: 100%;
+    border: 3px solid rgba(38, 208, 238, 0.692);
+    border-radius: .6rem;
+    margin: .1rem 0;
+}
+
+.loading .main .bar .sub {
+    height: .1rem;
+    width: 98%;
+    margin: .008rem auto 0;
+}
+
+.loading .main .bar .percent {
+    height: 100%;
+    width: 0;
+    background-color: rgb(30, 213, 245);
+    border-radius: .6rem;
+}
+
+.loading .logo {
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    right: 0
+}
+
+.loading .logo img {
+    width: 1rem
+}
+
+.content {
+    position: absolute;
+    height: 80vh;
+    left: 0;
+    top: 65px;
+    right: 0;
+    bottom: 80x;
+    margin: auto;
+    z-index: 1;
+}
+
+.landing .title {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 85px;
+    left: 200px;
+}
+
+.landing .logo {
+    width: 30%;
+    position: absolute;
+    right: .2rem;
+    top: .2rem;
+}
+
+.landing .action-2 {
+    position: absolute;
+    bottom: .2rem;
+    width: 75%;
+    height: 100px;
+    bottom: 13%;
+    left: 45%;
+}
+
+.landing .start {
+    width: 45%;
+    height: 80px;
+    cursor: pointer;
+}
+
+#help {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    position: sticky;
+}
+
+.Help {
+    height: auto;
+    width: 100%;
+    z-index: 3;
+    top: 450px;
+    right: 37%;
+    position: relative;
+    display: flex;
+}
+
+.Help {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Tooltip text */
+
+.Help .tooltiptext {
+    visibility: hidden;
+    width: 30%;
+    margin-left: -21%;
+    height: auto;
+    font-size: small;
+    background-color: rgba(17, 5, 82, 0.849);
+    color: rgba(203, 231, 42, 0.877);
+    text-align: left;
+    padding: 10px 10px;
+    border-radius: 5px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 88%;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+/* Tooltip arrow */
+
+.Help.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    margin-left: 3px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.Help:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slideTop {
+    -webkit-animation: st 1s ease-in-out;
+    animation: st 1s ease-in-out;
+}
+
+@-webkit-keyframes st {
+    0% {
+        transform: translateZ(0)
+    }
+    100% {
+        transform: translate3d(0, -100%, 0)
+    }
+}
+
+@keyframes st {
+    0% {
+        transform: translateZ(0)
+    }
+    100% {
+        transform: translate3d(0, -100%, 0)
+    }
+}
+
+.slideBottom {
+    -webkit-animation: sb 1s ease-in-out;
+    animation: sb 1s ease-in-out;
+}
+
+@-webkit-keyframes sb {
+    0% {
+        transform: translateZ(0)
+    }
+    100% {
+        transform: translate3d(0, 200%, 0)
+    }
+}
+
+@keyframes sb {
+    0% {
+        transform: translateZ(0)
+    }
+    100% {
+        transform: translate3d(0, 200%, 0)
+    }
+}
+
+.swing {
+    -webkit-animation: sw 2s ease-in-out alternate infinite;
+    animation: sw 2s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes sw {
+    0% {
+        transform: rotate(5deg);
+        transform-origin: top center;
+    }
+    100% {
+        transform: rotate(-5deg);
+        transform-origin: top center;
+    }
+}
+
+@keyframes sw {
+    0% {
+        transform: rotate(5deg);
+        transform-origin: top center;
+    }
+    100% {
+        transform: rotate(-5deg);
+        transform-origin: top center;
+    }
+}
+
+.modal .mask {
+    background-color: #000;
+    opacity: .6;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modal .modal-content {
+    position: fixed;
+    height: 100%;
+    width: 90%;
+    margin-top: .3rem;
+    top: 0;
+}
+
+.modal .main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.modal .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #d1f30d81;
+    object-fit: cover;
+}
+
+.modal .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0
+}
+
+.modal .modal-main {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -0.4rem;
+}
+
+.modal .over-img {
+    width: 30%;
+    margin: 1rem auto 0;
+}
+
+.modal .over-score {
+    margin-top: 280px;
+    font-size: 0.5rem;
+    color: #ff5c5cb6;
+    text-shadow: -2px -2px 0 rgb(10, 7, 59), 2px -2px 0 rgb(10, 7, 59), -2px 2px 0 rgb(10, 7, 59), 2px 2px 0 rgb(10, 7, 59);
+}
+
+.modal .tip {
+    font-size: 3vw;
+    font-family: 'Henny Penny', cursive;
+    color: rgb(33, 3, 88);
+    position: relative;
+    top: 18vh;
+    width: 100%;
+    height: 5vh;
+    object-fit: cover;
+    text-align: center;
+}
+
+.modal.scoretext {
+    font-size: 5px;
+    font-family: 'Henny Penny', cursive;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+}
+
+.modal .over-button-b {
+    margin: 0.1rem auto 0;
+    cursor: pointer;
+    position: relative;
+    top: 40vh;
+    width: 12%;
+    height: auto;
+    left: 25%;
+}
+
+.wxShare {
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    opacity: .9
+}
+
+.wxShare img {
+    width: 50%;
+    float: right;
+    margin: 10px 10px 0 0
+}
+
+@font-face {
+    font-family: 'wenxue';
+    src: url('./assets/wenxue.eot');
+    src: url('./assets/wenxue.eot'), url('./assets/wenxue.woff'), url('./assets/wenxue.ttf'), url('./assets/wenxue.svg');
+}
+
+.font-wenxue {
+    font-family: 'wenxue';
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        position: absolute;
+        height: 15vh;
+        width: 50vw;
+        top: 17%;
+        margin: auto;
+        z-index: 1;
+    }
+    .icon-bar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+    .icon-bar a {
+        top: 4%;
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 12px 0;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 36px;
+    }
+    .landing .title {
+        top: 25%;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 85px;
+        left: 120px;
+    }
+    .landing .logo {
+        width: 30%;
+        position: absolute;
+        right: .2rem;
+        top: .2rem;
+    }
+    .landing .action-2 {
+        position: absolute;
+        bottom: .2rem;
+        width: 75%;
+        height: 100px;
+        top: 65%;
+        left: 45%;
+    }
+    .landing .start {
+        width: 45%;
+        height: 80px;
+        cursor: pointer;
+    }
+    .modal .container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 11.5%;
+        left: 0;
+        background-color: #d1f30d81;
+        object-fit: cover;
+    }
+    .modal .modal-main {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 15%;
+    }
+    .modal .over-score {
+        margin-top: 200px;
+        font-size: 0.4rem;
+        color: #ff5c5cb6;
+        text-shadow: -2px -2px 0 rgb(10, 7, 59), 2px -2px 0 rgb(10, 7, 59), -2px 2px 0 rgb(10, 7, 59), 2px 2px 0 rgb(10, 7, 59);
+    }
+    .modal .tip {
+        font-size: 8vw;
+        font-family: 'Henny Penny', cursive;
+        color: rgb(33, 3, 88);
+        position: relative;
+        top: 18vh;
+        width: 100%;
+        height: 5vh;
+        object-fit: cover;
+        text-align: center;
+    }
+    .modal.scoretext {
+        font-size: 5px;
+        font-family: 'Henny Penny', cursive;
+        position: absolute;
+        top: 5%;
+        left: 0;
+        right: 0;
+    }
+    .modal .over-button-b {
+        margin: 0.1rem auto 0;
+        cursor: pointer;
+        position: relative;
+        top: 25vh;
+        width: 12.5%;
+        height: auto;
+        left: 28%;
+    }
+}
